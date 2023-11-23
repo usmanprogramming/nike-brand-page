@@ -1,0 +1,69 @@
+.main {
+  margin: 60px 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > .page-main-part {
+    width: 595px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    > .heading-div {
+      height: 306px;
+      width: 595px;
+      > h1 {
+        font-weight: 900;
+        font-size: 100px;
+        line-height: 1;
+      }
+    }
+    > .para-div {
+        line-height: 1.5;
+    }
+    > .btns-div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 331px;
+      height: 41px;
+      > .shop-now-btn {
+        width: 150px;
+        height: 41px;
+        background-color: #D01C28;
+        color: #fff;
+        border: none;
+        text-transform: uppercase;
+      }
+      > .category-btn {
+        width: 150px;
+        height: 41px;
+        color: #000000;
+        border: 1px solid #000000;
+        text-transform: uppercase;
+        background-color: #fff;
+      }
+    }
+    > .available-div {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        justify-content: space-between;
+        width: 131px;
+        height: 67px;
+        > p {
+            font-size: 12px;
+        }
+        > .amazon-flipkart-div {
+            width: 80px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+  }
+  > .page-img-part {
+  }
+}

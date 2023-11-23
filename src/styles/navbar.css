@@ -1,0 +1,28 @@
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 14px 40px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > .menu-div {
+        width: 360px;
+        > ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style-type: none;
+            font-weight: 600;
+        }
+    }
+    > .login-btn-div {
+        > button {
+            width: 75px;
+            height: 31px;
+            background-color: #D01C28;
+            color: #fff;
+            border: none;
+        }
+    }
+}
