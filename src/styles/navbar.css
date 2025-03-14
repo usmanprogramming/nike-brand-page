@@ -1,28 +1,90 @@
+/* Base styling */
 .nav {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: relative;
+}
+
+.logo-div img {
+  height: 50px;
+}
+
+.menu-div ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-weight: 600;
+  padding: 0;
+}
+
+.menu-div li {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.menu-div li:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.login-btn-div button {
+  padding: 0.5rem 1rem;
+  background-color: #d01c28;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn-div button:hover {
+  background-color: #ff3946;
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile styling */
+@media (max-width: 800px) {
+  .menu-div {
+    display: none;
+    flex-direction: column;
     align-items: center;
-    padding: 14px 40px;
+    gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
     background-color: #fff;
+    padding: 1rem;
+  }
+
+  .menu-div.open {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    > .menu-div {
-        width: 360px;
-        > ul {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            list-style-type: none;
-            font-weight: 600;
-        }
-    }
-    > .login-btn-div {
-        > button {
-            width: 75px;
-            height: 31px;
-            background-color: #D01C28;
-            color: #fff;
-            border: none;
-        }
-    }
+  }
+
+  .menu-div ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-div li {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }

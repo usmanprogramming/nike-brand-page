@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/main.css";
-import shoe_image from "../assets/shoe_image.png";
-import amazon from "../assets/amazon.png";
-import flipkart from "../assets/flipkart.png";
+import shoe_image from "../assets/shoe_image.webp";
+import amazon from "../assets/amazon.webp";
+import flipkart from "../assets/flipkart.webp";
 
 const Main = () => {
   return (
@@ -10,23 +10,13 @@ const Main = () => {
       <main className="main">
         <div className="page-main-part">
           <div className="heading-div">
-            <h1>
-              Your feet
-              <br />
-              deserve
-              <br />
-              the best
-            </h1>
+            <h1>Your feet deserve the best</h1>
           </div>
           <div className="para-div">
             <p>
-              Your feet deserve the best and we're here to
-              <br />
-              help you with our shoes. your feet deserve
-              <br />
-              the best and we're here to help you with our
-              <br />
-              shoes
+              Your feet deserve the best and we're here to help you with our
+              shoes. your feet deserve the best and we're here to help you with
+              our shoes
             </p>
           </div>
           <div className="btns-div">
@@ -36,13 +26,30 @@ const Main = () => {
           <div className="available-div">
             <p>Also available on</p>
             <div className="amazon-flipkart-div">
-              <img style={{ width: "32px", height: "32" }} src={flipkart} />
-              <img style={{ width: "32px", height: "32" }} src={amazon} />
+              <img
+                style={{ width: "32px", height: "32px", cursor: "pointer" }}
+                src={flipkart}
+                alt="Flipkart icon"
+                loading="lazy"
+              />
+              <img
+                style={{ width: "32px", height: "32px", cursor: "pointer" }}
+                src={amazon}
+                alt="Amazon icon"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
         <div className="page-img-part">
-          <img src={shoe_image} style={{ width: "530px", height: "487px" }} />
+          <img
+            src={shoe_image}
+            alt="Shoe image"
+            width="300"
+            height="300"
+            loading="eager"
+            fetchpriority="high"
+          />
         </div>
       </main>
     </div>

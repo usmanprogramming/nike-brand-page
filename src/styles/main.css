@@ -1,69 +1,132 @@
 .main {
-  margin: 60px 200px;
   display: flex;
-  align-items: center;
+  flex-wrap: nowrap;
   justify-content: center;
-  > .page-main-part {
-    width: 595px;
-    height: 600px;
-    display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 4rem 2rem;
+}
+
+.page-main-part,
+.page-img-part {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.page-main-part {
+  max-width: 600px;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heading-div h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1;
+  font-display: swap;
+}
+
+.para-div {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.btns-div {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.shop-now-btn,
+.category-btn {
+  padding: 0.75rem 2rem;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1;
+  min-width: 120px;
+  white-space: nowrap;
+}
+
+.shop-now-btn {
+  background-color: #d01c28;
+  color: #fff;
+}
+
+.shop-now-btn:hover {
+  background-color: #ff3946;
+}
+
+.category-btn {
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+}
+
+.category-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.available-div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.amazon-flipkart-div {
+  display: flex;
+  gap: 1rem;
+}
+
+.amazon-flipkart-div img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.page-img-part img {
+  max-width: 100%;
+  height: auto;
+  width: 300px;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 910px) {
+  .main {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
-    > .heading-div {
-      height: 306px;
-      width: 595px;
-      > h1 {
-        font-weight: 900;
-        font-size: 100px;
-        line-height: 1;
-      }
-    }
-    > .para-div {
-        line-height: 1.5;
-    }
-    > .btns-div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 331px;
-      height: 41px;
-      > .shop-now-btn {
-        width: 150px;
-        height: 41px;
-        background-color: #D01C28;
-        color: #fff;
-        border: none;
-        text-transform: uppercase;
-      }
-      > .category-btn {
-        width: 150px;
-        height: 41px;
-        color: #000000;
-        border: 1px solid #000000;
-        text-transform: uppercase;
-        background-color: #fff;
-      }
-    }
-    > .available-div {
-        display: flex;
-        flex-direction: column;
-        align-items: self-start;
-        justify-content: space-between;
-        width: 131px;
-        height: 67px;
-        > p {
-            font-size: 12px;
-        }
-        > .amazon-flipkart-div {
-            width: 80px;
-            height: 32px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-    }
+    gap: 2rem;
   }
-  > .page-img-part {
+  .heading-div h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heading-div h1,
+  .para-div,
+  .available-div p {
+    text-align: center;
+  }
+  .btns-div,
+  .amazon-flipkart-div,
+  .available-div {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .page-img-part img {
+    width: 80%;
+    max-width: 250px;
   }
 }
